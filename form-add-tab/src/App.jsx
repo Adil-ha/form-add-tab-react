@@ -1,7 +1,7 @@
-import "./App.css";
 import { useState, useEffect } from "react";
 import FormComponent from "./components/FormComponents";
 import ArrayComponent from "./components/ArrayComponent";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -22,8 +22,11 @@ function App() {
 
   return (
     <div className="App">
-      <FormComponent addUser={addUser} />
-      <ArrayComponent users={users} />
+      <div className="container">
+        <FormComponent addUser={addUser} />
+        <hr />
+        <ArrayComponent users={users} />
+      </div>
     </div>
   );
 }
